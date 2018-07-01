@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from 'src/app/content.service';
 
 @Component({
   selector: 'app-angular',
@@ -6,19 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./angular.component.css']
 })
 export class AngularComponent implements OnInit {
-  topicList = [
-    'NgModule',
-    'Component',
-    'Directive',
-    'Service',
-    'Pipe',
-    'HttpClient',
-    'Router',
-    'Testing'
-  ];
-  constructor() { }
+  topicList:Array<string>;
+  constructor(private contentService:ContentService) { }
 
   ngOnInit() {
+    this.contentService.getTopicList('angular').subscribe(
+      data => this.topicList = data
+    )
   }
-
 }
