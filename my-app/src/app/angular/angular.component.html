@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let topic of topicList">
+    <a [routerLink]="['/'+topic]">
+      {{topic}}</a></li>
+</ul>
