@@ -5,7 +5,12 @@
   </h1>
   </div>
   <nav>
-      <a routerLink="/Javascript" routerLinkActive="active">Javascript </a>
+      <a routerLink="/Javascript" routerLinkActive="active">Javascript  </a>
       <a routerLink="/Angular" routerLinkActive="active">Angular</a>
     </nav>
-<router-outlet></router-outlet>
+  <div class="row">
+      <div class="col-sm-2"><router-outlet></router-outlet></div>
+      <div class="col-sm-10"><app-detail-content></app-detail-content></div>
+    </div>
+
+

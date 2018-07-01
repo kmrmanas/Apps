@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, Router } from '@angular/router';
 import { AppComponent } from './app.component';
 import { JavascriptComponent } from './javascript/javascript.component';
+import { DetailContentComponent } from './detail-content/detail-content.component';
 
 
 const appRoutes :Routes = [
@@ -14,6 +15,7 @@ const appRoutes :Routes = [
   declarations: [
     AppComponent,
     JavascriptComponent,
+    DetailContentComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,4 +24,6 @@ const appRoutes :Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {  // Diagnostic only: inspect router configuration
+
+ }

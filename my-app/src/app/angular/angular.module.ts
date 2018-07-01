@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, Router } from '@angular/router';
 import { AngularComponent } from './angular.component';
 const angularRoutes :Routes = [
-  {path:'', component: AngularComponent},
+  {path:'', component: AngularComponent}
 ] 
 @NgModule({
   imports: [
@@ -12,4 +12,8 @@ const angularRoutes :Routes = [
   ],
   declarations: [AngularComponent]
 })
-export class AngularModule { }
+export class AngularModule {
+  constructor(router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
+ }
