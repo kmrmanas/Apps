@@ -1,0 +1,17 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label class="center-block">title:
+          <input class="form-control" formControlName="title">
+        </label>
+        </div>
+        <div>
+        <label class="center-block">userId:
+            <input class="form-control" formControlName="userId">
+          </label>
+          </div><div>
+          <label class="center-block">body:
+              <input class="form-control" formControlName="body">
+            </label>
+    </div>  <div> <button type="button" (click)="onSubmit()"
+      [disabled]="userForm.pristine" class="btn btn-danger">submit</button></div>
+</form>
